@@ -1,0 +1,9 @@
+The commit message is from Git, but it is actually the editor that keeps you from quitting. This is because Git uses your default editor, which for a variety of reasons is usually set to vi (it might be something else on your OS, like pico).
+
+To write a commit message and get out of VI, follow these steps:
+
+press i (i for insert)
+write your merge message
+press esc (escape)
+write :wq (write & quit)
+then press enter
