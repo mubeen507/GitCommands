@@ -1,0 +1,116 @@
+Last login: Thu Sep 14 15:51:29 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+admins-MacBook-Air:JavaScriptDL admin$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+admins-MacBook-Air:JavaScriptDL admin$ git add .
+admins-MacBook-Air:JavaScriptDL admin$ git commit -m "v1"
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+admins-MacBook-Air:JavaScriptDL admin$ git push
+To github.com:SS224/JavaScriptDL.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:SS224/JavaScriptDL.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+admins-MacBook-Air:JavaScriptDL admin$ git fetch
+admins-MacBook-Air:JavaScriptDL admin$ git pull
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+admins-MacBook-Air:JavaScriptDL admin$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+admins-MacBook-Air:JavaScriptDL admin$ git config pull.rebase true   # rebase
+admins-MacBook-Air:JavaScriptDL admin$ git fetch
+admins-MacBook-Air:JavaScriptDL admin$ git pull
+Successfully rebased and updated refs/heads/main.
+admins-MacBook-Air:JavaScriptDL admin$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+admins-MacBook-Air:JavaScriptDL admin$ git add .
+admins-MacBook-Air:JavaScriptDL admin$ git commit -m "v1"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+admins-MacBook-Air:JavaScriptDL admin$ git push
+Enumerating objects: 25, done.
+Counting objects: 100% (25/25), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 3.82 KiB | 3.82 MiB/s, done.
+Total 15 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:SS224/JavaScriptDL.git
+   bd63cb6..2a8c25a  main -> main
+admins-MacBook-Air:JavaScriptDL admin$ 
